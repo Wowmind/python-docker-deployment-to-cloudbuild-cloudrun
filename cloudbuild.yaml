@@ -3,14 +3,14 @@ steps:
     args:
       [
         'build',
-        '-t', 'us-central1-docker.pkg.dev/abstract-disk-480721-g4/my-repo/myapp:$COMMIT_SHA',
+        '-t', 'us-central1-docker.pkg.dev/abstract-disk-480721-g4/myapp:$COMMIT_SHA',
         '.'
       ]
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
         'push',
-        'us-central1-docker.pkg.dev/abstract-disk-480721-g4/my-repo/myapp:$COMMIT_SHA'
+        'us-central1-docker.pkg.dev/abstract-disk-480721-g4/myapp:$COMMIT_SHA'
       ]
 options:
   logging: CLOUD_LOGGING_ONLY
